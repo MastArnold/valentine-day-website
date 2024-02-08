@@ -1,0 +1,61 @@
+#valentine-form{
+    position: fixed;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    z-index: 2016;
+    transition: 0.4s ease-in-out;
+}
+
+#valentine-form .form{
+    width: 30vw;
+    border: 1px solid transparent;
+}
+
+#valentine-form .form .top{
+    display: flex;
+    justify-content: center;
+}
+
+#valentine-form .form .top img{
+    width: 40vh;
+    height: auto;
+}
+
+#valentine-form .form .mid{
+    padding : 1.2rem 0;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: 'Calibri';
+}
+
+#valentine-form .form .bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#valentine-form .form .bottom button{
+    cursor: pointer;
+    margin:0;
+    padding : 0.65rem 0.9rem;
+    border:1px solid transparent;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+#valentine-form .form .bottom button#btn-yes{
+    background: rgb(53, 221, 53);
+    color : #333;
+}
+
+#valentine-form .form .bottom button#btn-no{
+    background: #fff;
+    border-color: rgb(187, 0, 0);
+    color :rgb(187, 0, 0)
+}

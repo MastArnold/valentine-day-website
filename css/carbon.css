@@ -1,0 +1,30 @@
+.carbon{
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+    display: inline-block;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: all 0.35s ease-in-out;
+}
+
+.c{content: url("../assets/svg/carbon/C.svg");}
+
+.c-plus-plus{content: url("../assets/svg/carbon/C++.svg");}
+
+.c-sharp{content: url("../assets/svg/carbon/C-sharp.svg");}
+
+.java{content: url("../assets/svg/carbon/java.svg");}
+
+.kotlin{content: url("../assets/svg/carbon/kotlin.svg");}
+
+.python{content: url("../assets/svg/carbon/python.svg");}
+
+.javascript{content: url("../assets/svg/carbon/javascript.svg");}
+
+.php{content: url("../assets/svg/carbon/php.svg");}
+
+.bash{content: url("../assets/svg/carbon/bash.svg");}

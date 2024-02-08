@@ -1,0 +1,43 @@
+.ico{
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+    display: inline-block;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: all 0.35s ease-in-out;
+}
+
+.ico-heart{
+    content: url("../assets/svg/pixel-heart.svg");
+}
+
+.ico-heart-fade{
+    content: url("../assets/svg/heart-fade.svg");
+}
+
+.ico-cupidon-arrow{
+    content: url("../assets/svg/cupidon-arrow.svg");
+}
+
+
+.ico-c{content: url("../assets/svg/C.svg");}
+
+.ico-c-plus-plus{content: url("../assets/svg/C++.svg");}
+
+.ico-c-sharp{content: url("../assets/svg/Csharp.svg");}
+
+.ico-java{content: url("../assets/svg/java.svg");}
+
+.ico-kotlin{content: url("../assets/svg/kotlin.svg");}
+
+.ico-python{content: url("../assets/svg/python.svg");}
+
+.ico-javascript{content: url("../assets/svg/javascript.svg");}
+
+.ico-php{content: url("../assets/svg/php.svg");}
+
+.ico-bash{content: url("../assets/svg/bash.svg");}
