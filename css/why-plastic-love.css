@@ -2,7 +2,7 @@
     min-height: 90vh;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     grid-auto-rows: auto;
     grid-gap: 1rem;
     flex-wrap: wrap;

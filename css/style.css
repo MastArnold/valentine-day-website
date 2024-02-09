@@ -23,6 +23,50 @@ body{
     background-color: var(--color-primary);
 }
 
+.container-mobile{
+    position: fixed;
+    left:0;
+    top:0;
+    right: 0;
+    bottom:0;
+    padding : 1.2rem;
+    display: none;
+    place-items: center;
+    background-color: var(--color-primary);
+}
+
+.container-mobile .ico{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.container-mobile .ico img{
+    width: 50%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.container-mobile .text{
+    color: #333;
+    font-size: 1.3rem;
+    font-family: calibri;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media(max-width: 650px) {
+    .container{
+        display: none;
+    }
+    .container-mobile{
+        display: grid;
+    }
+}  
+
 @keyframes move-cupidon-arrow{
     0%{
         rotate: 210deg;
