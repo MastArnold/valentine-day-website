@@ -2,18 +2,16 @@
     background: #fff;
     padding : 1.2rem 1rem;
     margin: 0 3.5rem;
+    font-size: 1.1rem;
+    font-family: calibri;
 }
 
 #disquette .title{
-    font-size: 1.1rem;
     color : #333;
-    font-weight: calibri;
 }
 
 #disquette ul li{
     list-style-image: url("../assets/svg/heart-shine-svgrepo-com.svg");
     text-transform: capitalize;
     color : #333;
-    font-size: 1.1rem;
-    font-weight: calibri;
 }

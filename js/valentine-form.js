@@ -4,6 +4,7 @@ const topGif = document.getElementById("form-top-gif"); //le gif
 const mid = document.querySelector(".mid"); //le texte
 const btnYes = document.getElementById("btn-yes"); //le boutton oui
 const btnNo = document.getElementById("btn-no"); //le boutton non
+const errorSong = new Audio('assets/song/error.mp3');// on crée un objet audio pour le bruitage de boutton non
 let noCount = 0; //le compteur de non
 
 body.style.overflow = 'hidden'; //on bloque le scroll du body pour l'instant
@@ -42,7 +43,7 @@ btnYes.addEventListener("click", (e)=>{
     }, 5000);
 
     body.style.overflow = 'auto'; //on réactive le scroll du body
-    body.scrollTop = 0; //on remonte tout en haut de la page (ça peut arriver que le scroll soit en bas lors du rechargement de la page)
+    window.scrollTo(0, 0);; //on remonte tout en haut de la page (ça peut arriver que le scroll soit en bas lors du rechargement de la page)
 
     playPlasticLove(); //on joue la musique
 
@@ -61,6 +62,10 @@ btnNo.addEventListener("click", (e)=>{
     //si le compteur atteint 6 on cache le boutton non
     if(noCount >= 6){
         btnNo.style.display = "none";
+    }else{
+        errorSong.currentTime = 0.5;
+        errorSong.volume = 1; 
+        errorSong.play(); //on joue le bruitage de boutton non
     }
 
     //on change le texte du milieu en fonction du compteur

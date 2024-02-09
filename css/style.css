@@ -9,11 +9,6 @@
 }
 
 @font-face {
-    font-family: darling; 
-    src: url('../assets/font/Darling.ttf') format('truetype');
-}
-
-@font-face {
     font-family: advera; 
     src: url('../assets/font/Advera.ttf') format('truetype'); 
 }
@@ -131,4 +126,5 @@ footer{
     color: #333;
     font-weight: bold;
     font-family: consolas;
+    text-align: center;
 }

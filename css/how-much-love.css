@@ -9,15 +9,10 @@
     padding : 1.2rem;
 }
 
-#how-much-love .head hr{
-    width: 35%;
-    margin: 8px auto;
-    background: #000;
-}
-
 #how-much-love .head .title{
-    font-size: 2.7rem;
-    font-family: darling;
+    font-size: 2.2rem;
+    font-weight: bold;
+    font-family: calibri;
     text-align: center;
     padding : 0.6 0;
 }
@@ -27,6 +22,7 @@
     font-family: consolas;
     text-align: center;
     line-height: 1.8rem;
+    padding : 50px 0 0 0;
 }
 
 #how-much-love .dont-like{

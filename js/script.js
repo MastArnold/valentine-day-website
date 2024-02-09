@@ -1,5 +1,10 @@
+const thehead = document.querySelector("#thehead"); //le header
 const titrehead = document.querySelector("#titre-thehead"); //le text du header
 const arrow = document.querySelector("#arrow"); //l'icone animé inutile là, sous la forme de la flèche de cupidon
+const whyPlasticLove = document.querySelector("#why-plastic-love"); //la section "pourquoi plastic love"
+const howMuchLove = document.querySelector("#how-much-love"); //la section "pourquoi plastic love"
+const advantages = document.querySelector("#advantages"); //la section "pourquoi plastic love"
+const disquette = document.querySelector("#disquette"); //la section "pourquoi plastic love"
 const listBtnLanguage = document.querySelectorAll(".btn-language"); //les bouttons du carousel 
 const listLanguageCard = document.querySelectorAll(".card-language"); //les items du carousel
 
@@ -101,38 +106,29 @@ function initBtnLanguage(){
  * elle sert à changer la flèche de cupidon de place à chaque nouvelle section
  * ça ne sert à rien mais je manquais d'inspiration aussi
  */
-function moveArrow() {
-    const sections = document.querySelectorAll("section"); // on récupère la liste des sections
-
-    const options = {
-        threshold: 0.5 // une option nécessaire pour la détection (je sais pas à quoi ça sert)
-    };
-
-    //on crée l'observable de détection de section
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                const targetSection = entry.target;
-                const targetIndex = Array.from(sections).indexOf(targetSection);
-                
-                if(targetIndex % 2 != 0){
-                    arrow.style.transform = "translate(-90vw, 80vh) rotateY(180deg)"; //place b
-                }else{
-                    arrow.style.transform = "translate(0, 0)"; //place a (la place initiale)
-                }
-            }
-        });
-    }, options);
-
-    //on donne toutes les sections à l'observable
-    sections.forEach((section) => {
-        observer.observe(section);
+function initMoveArrow(){
+    window.addEventListener('scroll', (e)=>{
+        //on change la position de la flèche à chaque fois que la section cible est atteinte
+        //le getBoundingClientRect().top est positif quand l'élément n'as pas encore été atteint et négatif quand on le dépasse
+        //on sait qu'on à dépasser la section actuelle quand le getBoundingClientRect().top est inférieur à la hauteur négative de la section
+        console.log(howMuchLove.getBoundingClientRect().top);
+        if(thehead.getBoundingClientRect().top >= 0){
+            arrow.style.transform = "translate(0) rotateY(0)"; //place a
+        }else if(whyPlasticLove.getBoundingClientRect().top >= 0 || whyPlasticLove.getBoundingClientRect().top >= (whyPlasticLove.clientHeight*(-1))){
+            arrow.style.transform = "translate(-90vw, 0) rotateY(180deg)"; //place b
+        }else if(howMuchLove.getBoundingClientRect().top >= 0 || howMuchLove.getBoundingClientRect().top >= (howMuchLove.clientHeight*(-1))){
+            arrow.style.transform = "translate(-90vw, 80vh) rotateY(180deg)"; //place c
+        }else if(advantages.getBoundingClientRect().top >= 0 || advantages.getBoundingClientRect().top >= (advantages.clientHeight*(-1))){
+            arrow.style.transform = "translate(0, 80vh) rotateY(0)"; //place d
+        }else if(disquette.getBoundingClientRect().top >= 0 || disquette.getBoundingClientRect().top >= (disquette.clientHeight*(-1))){
+            arrow.style.transform = "translate(0, 0) rotateY(0deg)"; //place e
+        }
     });
 }
-
+    
 //on lance le wrap
 wrapperLetters();
 //on lance la fonction inutile. sérieusement je sais pas pourquoi j'ai fait ça
-moveArrow();
+initMoveArrow();
 //on initialise les bouttons du carousel
 initBtnLanguage(); 
