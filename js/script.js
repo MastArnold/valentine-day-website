@@ -18,6 +18,14 @@ function wrapperLetters(){
     const lettres = text.split('').map(letter => `<span>${letter}</span>`); //on crée un array qui contiendra chaque lettre du text avec split, et ensuite on remplace toute les lettres de l'array par la version wrapper
     lettres[9] = `<span><i class="ico ico-heart"></i></span>`; //l'élément numéro 9 de l'array à besoin d'inclure une classe dans son code. donc euh... voilà
     titrehead.innerHTML = lettres.join(''); //on concatène tous les éléments de l'array et on le fait remplacer par le contenu html de la balise #titre-head
+    /**/
+    titrehead.children[9].appendChild(document.createElement('div')).classList.add("bloc-piece-heart");
+    for(let i=0; i<20;i++){
+        const element = document.createElement('div');
+        element.classList.add("piece-heart");
+        titrehead.children[9].children[1].appendChild(element);
+    }
+    
 }
 
 /**
@@ -111,17 +119,16 @@ function initMoveArrow(){
         //on change la position de la flèche à chaque fois que la section cible est atteinte
         //le getBoundingClientRect().top est positif quand l'élément n'as pas encore été atteint et négatif quand on le dépasse
         //on sait qu'on à dépasser la section actuelle quand le getBoundingClientRect().top est inférieur à la hauteur négative de la section
-        console.log(howMuchLove.getBoundingClientRect().top);
         if(thehead.getBoundingClientRect().top >= 0){
-            arrow.style.transform = "translate(0) rotateY(0)"; //place a
+            arrow.style.transform = "translate(0, 0) rotateY(180deg)"; //place a
         }else if(whyPlasticLove.getBoundingClientRect().top >= 0 || whyPlasticLove.getBoundingClientRect().top >= (whyPlasticLove.clientHeight*(-1))){
-            arrow.style.transform = "translate(-90vw, 0) rotateY(180deg)"; //place b
+            arrow.style.transform = "translate(calc(-90vw + 15px), 0) rotateY(0deg)"; //place b
         }else if(howMuchLove.getBoundingClientRect().top >= 0 || howMuchLove.getBoundingClientRect().top >= (howMuchLove.clientHeight*(-1))){
-            arrow.style.transform = "translate(-90vw, 80vh) rotateY(180deg)"; //place c
+            arrow.style.transform = "translate(calc(-90vw + 15px), 80vh) rotateY(0deg)"; //place c
         }else if(advantages.getBoundingClientRect().top >= 0 || advantages.getBoundingClientRect().top >= (advantages.clientHeight*(-1))){
-            arrow.style.transform = "translate(0, 80vh) rotateY(0)"; //place d
+            arrow.style.transform = "translate(0, 80vh) rotateY(180deg)"; //place d
         }else if(disquette.getBoundingClientRect().top >= 0 || disquette.getBoundingClientRect().top >= (disquette.clientHeight*(-1))){
-            arrow.style.transform = "translate(0, 0) rotateY(0deg)"; //place e
+            arrow.style.transform = "translate(0, 0) rotateY(180deg)"; //place e
         }
     });
 }

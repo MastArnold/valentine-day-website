@@ -1,0 +1,109 @@
+@keyframes show-ourson{
+    0%{
+        scale: 0;
+        opacity: 0;
+    }
+    50%{
+        scale: 0.5;
+        opacity: 0.5;
+    }
+    100%{
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+@keyframes hide-ourson{
+    0%{
+        scale: 1;
+        opacity: 1;
+    }
+    50%{
+        scale: 0.5;
+        opacity: 0.5;
+    }
+    100%{
+        scale: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes move-ico-ourson{
+    0%{
+        transform: rotateZ(35deg);
+    }
+    50%{
+        transform: rotateZ(-35deg);
+    }
+    100%{
+        transform: rotateZ(35deg);
+    }
+}
+
+#ourson .bearbox{
+    position: fixed;
+    z-index: 2001;
+    scale: 0;
+    opacity: 0;
+    animation: show-ourson 0.5s ease-in-out forwards;
+}
+
+#ourson .bearbox .ico{
+    width: 32px;
+    height: auto;
+    transform: rotateZ(35deg);
+    animation : move-ico-ourson 3s steps(3) infinite;
+}
+
+@keyframes shake-arrow{
+    0%{
+        transform: rotateZ(45deg);
+    }
+    25%{
+        transform: rotateZ(50deg);
+    }
+    50%{
+        transform: rotateZ(45deg);
+    }
+    75%{
+        transform: rotateZ(40deg);
+    }
+    100%{
+        transform: rotateZ(45deg);
+    }
+}
+
+@keyframes decocher-arrow{
+    0%{
+        transform: translateX(0) rotateZ(45deg);
+    }
+    100%{
+        transform: translateX(100vw) rotateZ(45deg);
+    }
+}
+
+.animation-shake-arrow{
+    animation: shake-arrow 0.2s ease-in-out infinite;
+}
+
+.animation-decocher-arrow{
+    animation: decocher-arrow 1.5s ease-in-out;
+}
+
+.bloc-piece-heart{
+    position: absolute;
+    left:0;
+    top:0;
+    right: 0;
+    height: 6.8vw;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 0.2rem;
+    z-index: 1999;
+}
+
+.bloc-piece-heart .piece-heart{
+    
+}
+

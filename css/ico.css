@@ -19,10 +19,9 @@
     content: url("../assets/svg/heart-fade.svg");
 }
 
-.ico-cupidon-arrow{
-    content: url("../assets/svg/cupidon-arrow.svg");
-}
+.ico-cupidon-arrow{content: url("../assets/svg/cupidon-arrow.svg");}
 
+.ico-cupidon-true-arrow{content: url("../assets/svg/cupidon-true-arrow.svg");}
 
 .ico-c{content: url("../assets/svg/C.svg");}
 
@@ -41,3 +40,9 @@
 .ico-php{content: url("../assets/svg/php.svg");}
 
 .ico-bash{content: url("../assets/svg/bash.svg");}
+
+.ico-bearcup-1{content : url("../assets/svg/bearcub1.svg")}
+
+.ico-bearcup-2{content : url("../assets/svg/bearcub2.svg")}
+
+.ico-bearcup-3{content : url("../assets/svg/bearcub3.svg")}

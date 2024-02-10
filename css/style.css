@@ -69,22 +69,21 @@ body{
 
 @keyframes move-cupidon-arrow{
     0%{
-        rotate: 210deg;
-        translate: 0 0;
+        transform: translate(0, 0) rotateZ(10deg);
     }
     50%{
-        rotate: 250deg;
-        translate: 0 -10px;
+        transform: translate(0, -10px) rotateZ(50deg);
     }
     75%{
-        rotate: 170deg;
-        translate: 0 10px;
-
+        transform: translate(0, 10px) rotateZ(70deg);
     }
     100%{
-        rotate: 210deg;
-        translate: 0 0;
+        transform: translate(0, 0) rotateZ(10deg);
     }
+}
+
+.animation-move-cupidon-arrow{
+    animation: move-cupidon-arrow 5s ease-in-out infinite;
 }
 
 #arrow{
@@ -94,11 +93,20 @@ body{
     z-index: 1999;
     transition: 1s ease-in-out;
 }
-.ico-cupidon-arrow{
-    width: 5vw;
+#arrow .box-arrow{
+    position: relative;
+}
+.ico-cupidon-arrow, .ico-cupidon-true-arrow{
+    width: 48px;
     height: auto;
-    rotate: z 210deg;
-    animation: move-cupidon-arrow 5s ease-in-out infinite;
+    transform: rotateZ(45deg);
+    transition: 0.4s ease-in-out;
+}
+
+.ico-cupidon-true-arrow{
+    position: absolute;
+    left:0;
+    top:0;
 }
 
 #thehead{
@@ -157,6 +165,7 @@ body{
 
 #thehead h1 span{
     display: inline-block;
+    position: relative;
 }
 #thehead h1 span .ico{
     width: 8vw;
