@@ -10,6 +10,22 @@ let noCount = 0; //le compteur de non
 body.style.overflow = 'hidden'; //on bloque le scroll du body pour l'instant
 valentineForm.style.display = "flex"; //on défini le style display à flex. il l'est déjà dans le css mais bon, js est très capricieux comme langage
 
+// Préchargement des GIFs
+const images = [
+    "assets/GIF/f-1.gif",
+    "assets/GIF/f-2.gif",
+    "assets/GIF/f-3.gif",
+    "assets/GIF/f-4.gif",
+    "assets/GIF/f-5.gif",
+    "assets/GIF/f-6.gif",
+    "assets/GIF/f-7.gif"
+];
+const preloaded = [];
+for (let i = 0; i < images.length; i++) {
+    preloaded[i] = new Image();
+    preloaded[i].src = images[i];
+}
+
 /**
  * permet de relancer l'animation des gif qui est censé s'arrêter au bout de 6s
  */
@@ -112,7 +128,7 @@ btnNo.addEventListener("click", (e)=>{
 
     //on change le src du gif en fonction du compteur
     //dans assets/GIF il y a 7 gif dont le nom commence par f-
-    topGif.setAttribute("src", "assets/GIF/f-"+(noCount+1)+".gif");
+    topGif.setAttribute("src", images[noCount]);
 });
 
 //on lance le rafraichissement du gif
